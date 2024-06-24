@@ -1,4 +1,6 @@
 package hexlet.code;
+import hexlet.code.Games.Even;
+
 import java.util.Scanner;
 
 public class Cli {
