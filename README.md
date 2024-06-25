@@ -3,10 +3,13 @@
 
 
 ## Even game
-#### Demonstration:
+##### Demonstration:
 [![asciicast](https://asciinema.org/a/fD0CA6vhCuFxUzpcLAiK1fDbl.svg)](https://asciinema.org/a/fD0CA6vhCuFxUzpcLAiK1fDbl)
 
 ## Calculator game
-#### Demonstration:
+##### Demonstration:
 [![asciicast](https://asciinema.org/a/WiJC6WT1FBCVKbVKYTx0iLFB6.svg)](https://asciinema.org/a/WiJC6WT1FBCVKbVKYTx0iLFB6)
 
+## Greatest common divisor
+##### Demonstration:
+[![asciicast](https://asciinema.org/a/p181zAfe1VXd9dC1nRP4NLqPa.svg)](https://asciinema.org/a/p181zAfe1VXd9dC1nRP4NLqPa)
