@@ -39,7 +39,7 @@ public class Calculator {
             for (int i = 0; i < Engine.ROUNDS; i++) {
                 questions[i] = generateQuestion();
             }
-            Engine.launch(DESCRIPTION, userName, questions);
+            Engine.flow(DESCRIPTION, userName, questions);
         }
         catch(IllegalArgumentException e) {
             System.out.println("Error by generating questions in calcalator");

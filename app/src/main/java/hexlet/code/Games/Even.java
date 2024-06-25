@@ -28,6 +28,6 @@ public class Even {
 
     public static void launchEven(String userName) {
         Question[] questions = {generateQuestion(), generateQuestion(), generateQuestion()};
-        Engine.launch(DESCRIPTION, userName, questions);
+        Engine.flow(DESCRIPTION, userName, questions);
     }
 }
