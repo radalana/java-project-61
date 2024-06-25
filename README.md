@@ -13,3 +13,7 @@
 ## Greatest common divisor
 ##### Demonstration:
 [![asciicast](https://asciinema.org/a/p181zAfe1VXd9dC1nRP4NLqPa.svg)](https://asciinema.org/a/p181zAfe1VXd9dC1nRP4NLqPa)
+
+## Arithmetic progression
+##### Demonstration:
+[![asciicast](https://asciinema.org/a/qoCNNamfXvlPZwUwws3QObXql.svg)](https://asciinema.org/a/qoCNNamfXvlPZwUwws3QObXql)
