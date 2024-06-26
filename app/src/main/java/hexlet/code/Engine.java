@@ -8,7 +8,7 @@ public class Engine {
             System.out.println(description);
             System.out.println("Question: " + questions[i].getQuestion());
 
-            String userAnswer = Cli.scanner.next();
+            String userAnswer = Cli.getScanner().next();
             String correctAnswer = questions[i].getAnswer();
             if (userAnswer.equals(correctAnswer)) {
                 System.out.println("Correct");

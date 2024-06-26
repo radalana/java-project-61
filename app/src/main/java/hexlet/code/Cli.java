@@ -8,7 +8,10 @@ import hexlet.code.Games.Progression;
 import java.util.Scanner;
 //TODO: create Launcher Class
 public class Cli {
-    public static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
+    public static Scanner getScanner() {
+        return scanner;
+    }
     public static String getUserName() {
 
         System.out.println("Welcome to the Brain Games!");
