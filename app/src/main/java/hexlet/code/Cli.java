@@ -30,10 +30,10 @@ public class Cli {
         if (!userChoice.equals("0")) {
             String userName = getUserName();
             if (userChoice.equals("2")) {
-                Even.launchEven(userName);
+                Even.launch(userName);
             }
             if (userChoice.equals("3")) {
-                Calculator.launchCalc(userName);
+                Calculator.launch(userName);
             }
             if (userChoice.equals("4")) {
                 Gcd.launch(userName);
