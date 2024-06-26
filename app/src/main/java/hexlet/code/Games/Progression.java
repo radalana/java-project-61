@@ -16,7 +16,7 @@ public class Progression {
     }
     private static Question generateProgression() {
         int sizeOfProgression = NumberGenerator.generateNumber(MIN_SIZE, MAX_SIZE);
-        int hiddenIndex = NumberGenerator.generateNumber(sizeOfProgression);
+        int hiddenIndex = NumberGenerator.generateNumber((sizeOfProgression - 1));
         int minDiff = 1;
         int maxDiff = 11;
         int difference = NumberGenerator.generateNumber(minDiff, maxDiff);
