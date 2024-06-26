@@ -1,8 +1,5 @@
 package hexlet.code;
-import hexlet.code.Games.Even;
-import hexlet.code.Games.Calculator;
-import hexlet.code.Games.Gcd;
-import hexlet.code.Games.Progression;
+import hexlet.code.Games.*;
 
 import java.util.Scanner;
 
@@ -25,6 +22,7 @@ public class Cli {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
 
         String userChoice = scanner.next();
@@ -42,6 +40,9 @@ public class Cli {
             }
             if (userChoice.equals("5")) {
                 Progression.launch(userName);
+            }
+            if (userChoice.equals("6")) {
+                Prime.launch(userName);
             }
         }
         scanner.close();
