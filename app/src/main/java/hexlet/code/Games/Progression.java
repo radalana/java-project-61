@@ -31,7 +31,7 @@ public class Progression {
 
     public static void launch(String userName) {
         Question[] questions = new Question[Engine.ROUNDS];
-        for(int i = 0; i < Engine.ROUNDS; i++) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateProgression();
         }
         Engine.flow(DESCRIPTION, userName, questions);

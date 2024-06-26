@@ -11,7 +11,7 @@ public class Calculator {
     private static final int MAX = 100;
 
     private static char getOperator() {
-        int operatorIndex =(int) (Math.random() * 3);
+        int operatorIndex = (int) (Math.random() * 3);
         return OPERATORS[operatorIndex];
     }
     private static int calculate(int num1, int num2, char operator) {
@@ -24,7 +24,7 @@ public class Calculator {
             );
         };
     }
-    private static Question generateQuestion() throws IllegalArgumentException{
+    private static Question generateQuestion() throws IllegalArgumentException {
         int num1 = NumberGenerator.generateNumber(MAX);
         int num2 = NumberGenerator.generateNumber(MAX);
         char operator = getOperator();
@@ -34,13 +34,12 @@ public class Calculator {
 
     public static void launch(String userName) {
         Question[] questions = new Question[Engine.ROUNDS];
-        try{
+        try {
             for (int i = 0; i < Engine.ROUNDS; i++) {
                 questions[i] = generateQuestion();
             }
             Engine.flow(DESCRIPTION, userName, questions);
-        }
-        catch(IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Error by generating questions in calculator");
         }
     }

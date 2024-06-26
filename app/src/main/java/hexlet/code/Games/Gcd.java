@@ -7,10 +7,10 @@ public class Gcd {
     private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
     private static final int MAX = 100;
     private static int findGcd(int num1, int num2) {
-        while(num1 > 0 && num2 > 0) {
+        while (num1 > 0 && num2 > 0) {
             if (num1 >= num2) {
                 num1 = num1 % num2;
-            }else {
+            } else {
                 num2 = num2 % num1;
             }
         }

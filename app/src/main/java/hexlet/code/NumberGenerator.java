@@ -5,6 +5,6 @@ public class NumberGenerator {
         return min + (int) (Math.random() * (max - min + 1));
     }
     public static int generateNumber(int max) {
-       return  generateNumber(0, max);
+        return  generateNumber(0, max);
     }
 }
