@@ -9,6 +9,8 @@ public class Progression {
     private static final int MIN_SIZE = 5;
     private static final int MAX_SIZE = 10;
     private static final int MAX_START_NUMBER = 100;
+    private static final int MIN_DIFF = 1;
+    private static final int MAX_DIFF = 10;
 
     private static String formatProgression(String[] progression, int hiddenIndex) {
         progression[hiddenIndex] = "..";
@@ -17,9 +19,8 @@ public class Progression {
     private static Question generateProgression() {
         int sizeOfProgression = NumberGenerator.generateNumber(MIN_SIZE, MAX_SIZE);
         int hiddenIndex = NumberGenerator.generateNumber((sizeOfProgression - 1));
-        int minDiff = 1;
-        int maxDiff = 11;
-        int difference = NumberGenerator.generateNumber(minDiff, maxDiff);
+
+        int difference = NumberGenerator.generateNumber(MIN_DIFF, MAX_DIFF);
         int firstNumber = NumberGenerator.generateNumber(MAX_START_NUMBER);
         String[] progression = new String[sizeOfProgression];
         for (int i = 0; i < sizeOfProgression; i++) {
