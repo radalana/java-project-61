@@ -6,6 +6,7 @@ import hexlet.code.NumberGenerator;
 public class Prime {
     private static final int MAX_PRIME = 3571;
     private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final int FIRST_ODD_PRIME = 3;
 
     private static boolean isPrime(int number) {
         if (number < 2) {
@@ -15,7 +16,7 @@ public class Prime {
             return false;
         }
         int sqrt = (int) Math.sqrt(number);
-        for (int i = 3; i <= sqrt; i += 2) {
+        for (int i = FIRST_ODD_PRIME; i <= sqrt; i += 2) {
             if (number % i == 0) {
                 return false;
             }
