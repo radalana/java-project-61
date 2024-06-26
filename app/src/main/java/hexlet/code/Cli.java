@@ -8,15 +8,15 @@ import hexlet.code.Games.Progression;
 import java.util.Scanner;
 //TODO: create Launcher Class
 public class Cli {
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
     public static Scanner getScanner() {
-        return scanner;
+        return SCANNER;
     }
     public static String getUserName() {
 
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name?");
-        String userName = scanner.next();
+        String userName = SCANNER.next();
         System.out.println("Hello, " + userName + "!");
 
         return userName;
@@ -32,7 +32,7 @@ public class Cli {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
 
-        String userChoice = scanner.next();
+        String userChoice = SCANNER.next();
         System.out.println("Your choice: " + userChoice);
         if (!userChoice.equals("0")) {
             String userName = getUserName();
@@ -52,6 +52,6 @@ public class Cli {
                 Prime.launch(userName);
             }
         }
-        scanner.close();
+        SCANNER.close();
     }
 }
