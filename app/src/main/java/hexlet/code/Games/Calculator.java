@@ -11,7 +11,7 @@ public class Calculator {
     private static final int MAX = 100;
 
     private static char getOperator() {
-        int operatorIndex = (int) (Math.random() * 3);
+        int operatorIndex = NumberGenerator.generateNumber(OPERATORS.length - 1);
         return OPERATORS[operatorIndex];
     }
     private static int calculate(int num1, int num2, char operator) {
