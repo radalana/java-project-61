@@ -17,3 +17,7 @@
 ## Arithmetic progression
 ##### Demonstration:
 [![asciicast](https://asciinema.org/a/qoCNNamfXvlPZwUwws3QObXql.svg)](https://asciinema.org/a/qoCNNamfXvlPZwUwws3QObXql)
+
+## Prime
+##### Demonstration:
+[![asciicast](https://asciinema.org/a/0VaXXCayVWHsUVPEfXOVrR5bb.svg)](https://asciinema.org/a/0VaXXCayVWHsUVPEfXOVrR5bb)
