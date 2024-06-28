@@ -1,4 +1,4 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 import hexlet.code.NumberGenerator;
 import hexlet.code.Question;
 import hexlet.code.Engine;
@@ -23,11 +23,11 @@ public class Gcd {
         String question = String.format("%d %d", num1, num2);
         return new Question(question, Integer.toString(answer));
     }
-    public static void launch(String userName) {
+    public static void launch() {
         Question[] questions = new Question[Engine.ROUNDS];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateQuestion();
         }
-        Engine.flow(DESCRIPTION, userName, questions);
+        Engine.flow(DESCRIPTION, questions);
     }
 }

@@ -1,4 +1,4 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 import hexlet.code.Question;
 import hexlet.code.Engine;
 import hexlet.code.NumberGenerator;
@@ -34,12 +34,12 @@ public class Prime {
         String answer = getAnswer(number);
         return new Question(Integer.toString(number), answer);
     }
-    public static void launch(String userName) {
+    public static void launch() {
         Question[] questions = new Question[Engine.ROUNDS];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateQuestion();
         }
-        Engine.flow(DESCRIPTION, userName, questions);
+        Engine.flow(DESCRIPTION, questions);
     }
 
 }

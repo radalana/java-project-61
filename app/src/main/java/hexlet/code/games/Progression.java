@@ -1,4 +1,4 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.NumberGenerator;
 import hexlet.code.Question;
@@ -30,11 +30,11 @@ public class Progression {
         return new Question(formatProgression(progression, hiddenIndex), answer);
     }
 
-    public static void launch(String userName) {
+    public static void launch() {
         Question[] questions = new Question[Engine.ROUNDS];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateProgression();
         }
-        Engine.flow(DESCRIPTION, userName, questions);
+        Engine.flow(DESCRIPTION, questions);
     }
 }

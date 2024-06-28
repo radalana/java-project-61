@@ -1,4 +1,4 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Question;
 import hexlet.code.NumberGenerator;
@@ -23,8 +23,8 @@ public class Even {
         return new Question(Integer.toString(number), answer);
     }
 
-    public static void launch(String userName) {
+    public static void launch() {
         Question[] questions = {generateQuestion(), generateQuestion(), generateQuestion()};
-        Engine.flow(DESCRIPTION, userName, questions);
+        Engine.flow(DESCRIPTION, questions);
     }
 }

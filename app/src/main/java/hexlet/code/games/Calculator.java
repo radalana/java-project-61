@@ -1,4 +1,4 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.NumberGenerator;
@@ -32,13 +32,13 @@ public class Calculator {
         return new Question(String.format("%d %c %d", num1, operator, num2), Integer.toString(answer));
     }
 
-    public static void launch(String userName) {
+    public static void launch() {
         Question[] questions = new Question[Engine.ROUNDS];
         try {
             for (int i = 0; i < Engine.ROUNDS; i++) {
                 questions[i] = generateQuestion();
             }
-            Engine.flow(DESCRIPTION, userName, questions);
+            Engine.flow(DESCRIPTION, questions);
         } catch (IllegalArgumentException e) {
             System.out.println("Error by generating questions in calculator");
         }
