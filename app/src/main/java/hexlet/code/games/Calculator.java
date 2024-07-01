@@ -19,7 +19,7 @@ public class Calculator {
             case '+' -> num1 + num2;
             case '-' -> num1 - num2;
             case '*' -> num1 * num2;
-            default -> throw new IllegalArgumentException("Invalid operator");
+            default -> throw new RuntimeException("Invalid operator: " + operator);
         };
     }
     private static Question generateQuestion() throws IllegalArgumentException {
