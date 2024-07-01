@@ -11,15 +11,9 @@ public class Even {
         return number % 2 == 0;
     }
 
-    private static String getCorrectAnswer(int number) {
-        if (isEven(number)) {
-            return "yes";
-        }
-        return ("no");
-    }
     private static Question generateQuestion() {
         int number = Utils.generateNumber(SUP);
-        String answer = getCorrectAnswer(number);
+        String answer = isEven(number) ? "yes" : "no";
         return new Question(Integer.toString(number), answer);
     }
 
