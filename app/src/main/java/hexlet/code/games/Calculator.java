@@ -32,9 +32,9 @@ public class Calculator {
 
     public static void launch() {
         Question[] questions = new Question[Engine.ROUNDS];
-            for (int i = 0; i < Engine.ROUNDS; i++) {
-                questions[i] = generateQuestion();
-                Engine.flow(DESCRIPTION, questions);
-            }
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            questions[i] = generateQuestion();
+            Engine.flow(DESCRIPTION, questions);
+        }
     }
 }
