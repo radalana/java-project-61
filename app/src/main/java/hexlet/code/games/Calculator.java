@@ -19,9 +19,7 @@ public class Calculator {
             case '+' -> num1 + num2;
             case '-' -> num1 - num2;
             case '*' -> num1 * num2;
-            default -> throw new IllegalArgumentException(
-                    "Invalid operator: " + operator
-            );
+            default -> throw new IllegalArgumentException("Invalid operator");
         };
     }
     private static Question generateQuestion() throws IllegalArgumentException {
@@ -34,13 +32,9 @@ public class Calculator {
 
     public static void launch() {
         Question[] questions = new Question[Engine.ROUNDS];
-        try {
             for (int i = 0; i < Engine.ROUNDS; i++) {
                 questions[i] = generateQuestion();
+                Engine.flow(DESCRIPTION, questions);
             }
-            Engine.flow(DESCRIPTION, questions);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error by generating questions in calculator");
-        }
     }
 }
