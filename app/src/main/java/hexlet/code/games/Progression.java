@@ -12,10 +12,6 @@ public class Progression {
     private static final int MIN_DIFF = 1;
     private static final int MAX_DIFF = 10;
 
-    private static String formatProgression(String[] progression, int hiddenIndex) {
-        progression[hiddenIndex] = "..";
-        return StringUtils.join(progression, ' ');
-    }
     private static String[] makeProgression(int first, int step, int length) {
         String[] progression = new String[length];
         for (int i = 0; i < length; i++) {
@@ -30,7 +26,9 @@ public class Progression {
         int firstNumber = Utils.generateNumber(MAX_START_NUMBER);
         String[] progression = makeProgression(firstNumber, difference, sizeOfProgression);
         String answer = progression[hiddenIndex];
-        return new Question(formatProgression(progression, hiddenIndex), answer);
+        progression[hiddenIndex] = "..";
+        String question = String.join(" ", progression);
+        return new Question(question, answer);
     }
 
     public static void launch() {
