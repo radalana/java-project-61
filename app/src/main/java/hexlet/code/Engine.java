@@ -12,11 +12,11 @@ public class Engine {
         String userName = SCANNER.next();
         System.out.println("Hello, " + userName + "!");
         System.out.println(description);
-        for (int i = 0; i < ROUNDS; i++) {
-            System.out.println("Question: " + questions[i].getQuestion());
+        for (var question : questions) {
+            System.out.println("Question: " + question.getQuestion());
 
             String userAnswer = SCANNER.next();
-            String correctAnswer = questions[i].getAnswer();
+            String correctAnswer = question.getAnswer();
             if (userAnswer.equals(correctAnswer)) {
                 System.out.println("Correct");
             } else {
