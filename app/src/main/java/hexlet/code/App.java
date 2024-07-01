@@ -45,7 +45,7 @@ public class App {
                 Prime.launch();
                 break;
             default:
-                System.out.println("There is no such game!");
+                System.out.println("There is no such game: " + selectedGame);
                 break;
         }
         SCANNER.close();
