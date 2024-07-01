@@ -22,7 +22,7 @@ public class Calculator {
             default -> throw new RuntimeException("Invalid operator: " + operator);
         };
     }
-    private static Question generateQuestion() throws IllegalArgumentException {
+    private static Question generateQuestion() {
         int num1 = Utils.generateNumber(MAX);
         int num2 = Utils.generateNumber(MAX);
         char operator = getOperator();
@@ -34,7 +34,7 @@ public class Calculator {
         Question[] questions = new Question[Engine.ROUNDS];
         for (int i = 0; i < Engine.ROUNDS; i++) {
             questions[i] = generateQuestion();
-            Engine.flow(DESCRIPTION, questions);
         }
+        Engine.flow(DESCRIPTION, questions);
     }
 }
