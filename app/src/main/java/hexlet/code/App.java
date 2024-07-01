@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class App {
     private static final Scanner SCANNER = new Scanner(System.in);
-    public static void printMenu() {
+    private static void printMenu() {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
