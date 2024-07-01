@@ -23,15 +23,10 @@ public class Prime {
         }
         return true;
     }
-    private static String getAnswer(int number) {
-        if (isPrime(number)) {
-            return "yes";
-        }
-        return "no";
-    }
+
     private static Question generateQuestion() {
         int number = Utils.generateNumber(MAX_PRIME);
-        String answer = getAnswer(number);
+        String answer = isPrime(number) ? "yes" : "no";
         return new Question(Integer.toString(number), answer);
     }
     public static void launch() {
