@@ -16,16 +16,19 @@ public class Progression {
         progression[hiddenIndex] = "..";
         return StringUtils.join(progression, ' ');
     }
+    private static String[] makeProgression(int first, int step, int length) {
+        String[] progression = new String[length];
+        for (int i = 0; i < length; i++) {
+            progression[i] = Integer.toString(first + step * i);
+        }
+        return progression;
+    }
     private static Question generateProgression() {
         int sizeOfProgression = Utils.generateNumber(MIN_SIZE, MAX_SIZE);
         int hiddenIndex = Utils.generateNumber((sizeOfProgression - 1));
-
         int difference = Utils.generateNumber(MIN_DIFF, MAX_DIFF);
         int firstNumber = Utils.generateNumber(MAX_START_NUMBER);
-        String[] progression = new String[sizeOfProgression];
-        for (int i = 0; i < sizeOfProgression; i++) {
-            progression[i] =  Integer.toString(firstNumber + difference * i);
-        }
+        String[] progression = makeProgression(firstNumber, difference, sizeOfProgression);
         String answer = progression[hiddenIndex];
         return new Question(formatProgression(progression, hiddenIndex), answer);
     }
