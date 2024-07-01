@@ -18,7 +18,10 @@ public class Even {
     }
 
     public static void launch() {
-        Question[] questions = {generateQuestion(), generateQuestion(), generateQuestion()};
+        Question[] questions = new Question[Engine.ROUNDS];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            questions[i] = generateQuestion();
+        }
         Engine.flow(DESCRIPTION, questions);
     }
 }
