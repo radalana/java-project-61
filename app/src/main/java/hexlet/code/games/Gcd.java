@@ -1,5 +1,5 @@
 package hexlet.code.games;
-import hexlet.code.NumberGenerator;
+import hexlet.code.Utils;
 import hexlet.code.Question;
 import hexlet.code.Engine;
 
@@ -17,8 +17,8 @@ public class Gcd {
         return Math.max(num1, num2);
     }
     private static Question generateQuestion() {
-        int num1 = NumberGenerator.generateNumber(MAX);
-        int num2 = NumberGenerator.generateNumber(MAX);
+        int num1 = Utils.generateNumber(MAX);
+        int num2 = Utils.generateNumber(MAX);
         int answer = findGcd(num1, num2);
         String question = String.format("%d %d", num1, num2);
         return new Question(question, Integer.toString(answer));

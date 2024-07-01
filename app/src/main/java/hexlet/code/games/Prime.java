@@ -1,7 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Question;
 import hexlet.code.Engine;
-import hexlet.code.NumberGenerator;
+import hexlet.code.Utils;
 
 public class Prime {
     private static final int MAX_PRIME = 3571;
@@ -30,7 +30,7 @@ public class Prime {
         return "no";
     }
     private static Question generateQuestion() {
-        int number = NumberGenerator.generateNumber(MAX_PRIME);
+        int number = Utils.generateNumber(MAX_PRIME);
         String answer = getAnswer(number);
         return new Question(Integer.toString(number), answer);
     }

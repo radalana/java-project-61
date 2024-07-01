@@ -1,7 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Question;
-import hexlet.code.NumberGenerator;
+import hexlet.code.Utils;
 
 public class Even {
     private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -18,7 +18,7 @@ public class Even {
         return ("no");
     }
     private static Question generateQuestion() {
-        int number = NumberGenerator.generateNumber(SUP);
+        int number = Utils.generateNumber(SUP);
         String answer = getCorrectAnswer(number);
         return new Question(Integer.toString(number), answer);
     }

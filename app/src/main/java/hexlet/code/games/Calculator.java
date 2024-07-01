@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.NumberGenerator;
+import hexlet.code.Utils;
 import hexlet.code.Question;
 
 
@@ -11,7 +11,7 @@ public class Calculator {
     private static final int MAX = 100;
 
     private static char getOperator() {
-        int operatorIndex = NumberGenerator.generateNumber(OPERATORS.length - 1);
+        int operatorIndex = Utils.generateNumber(OPERATORS.length - 1);
         return OPERATORS[operatorIndex];
     }
     private static int calculate(int num1, int num2, char operator) {
@@ -25,8 +25,8 @@ public class Calculator {
         };
     }
     private static Question generateQuestion() throws IllegalArgumentException {
-        int num1 = NumberGenerator.generateNumber(MAX);
-        int num2 = NumberGenerator.generateNumber(MAX);
+        int num1 = Utils.generateNumber(MAX);
+        int num2 = Utils.generateNumber(MAX);
         char operator = getOperator();
         int answer = calculate(num1, num2, operator);
         return new Question(String.format("%d %c %d", num1, operator, num2), Integer.toString(answer));

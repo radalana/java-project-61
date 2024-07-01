@@ -1,6 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import hexlet.code.NumberGenerator;
+import hexlet.code.Utils;
 import hexlet.code.Question;
 import org.apache.commons.lang3.StringUtils;
 
@@ -17,11 +17,11 @@ public class Progression {
         return StringUtils.join(progression, ' ');
     }
     private static Question generateProgression() {
-        int sizeOfProgression = NumberGenerator.generateNumber(MIN_SIZE, MAX_SIZE);
-        int hiddenIndex = NumberGenerator.generateNumber((sizeOfProgression - 1));
+        int sizeOfProgression = Utils.generateNumber(MIN_SIZE, MAX_SIZE);
+        int hiddenIndex = Utils.generateNumber((sizeOfProgression - 1));
 
-        int difference = NumberGenerator.generateNumber(MIN_DIFF, MAX_DIFF);
-        int firstNumber = NumberGenerator.generateNumber(MAX_START_NUMBER);
+        int difference = Utils.generateNumber(MIN_DIFF, MAX_DIFF);
+        int firstNumber = Utils.generateNumber(MAX_START_NUMBER);
         String[] progression = new String[sizeOfProgression];
         for (int i = 0; i < sizeOfProgression; i++) {
             progression[i] =  Integer.toString(firstNumber + difference * i);
