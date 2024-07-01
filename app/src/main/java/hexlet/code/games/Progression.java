@@ -2,7 +2,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 import hexlet.code.Question;
-import org.apache.commons.lang3.StringUtils;
 
 public class Progression {
     private static final String DESCRIPTION = "What number is missing in the progression?";
