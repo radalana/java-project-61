@@ -12,7 +12,7 @@ public class Prime {
         if (number < 2) {
             return false;
         }
-        if (number % 2 == 0) {
+        if (number % 2 == 0 && number != 2) {
             return false;
         }
         int sqrt = (int) Math.sqrt(number);
